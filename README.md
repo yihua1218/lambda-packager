@@ -146,3 +146,15 @@ Work on this project is generously sponsored by [Bustle Labs][bustle-labs].
 
 [thaumaturgy]: https://github.com/node-hocus-pocus/thaumaturgy
 [bustle-labs]: http://www.bustle.com/labs
+
+## Locally
+
+```
+> git clone https://github.com/hmcfletch/lambda-packager
+> cd lambda-packager
+> npm link
+> git checkout fix/add-cloudformation-blueprint
+> npm install
+> lambda-packager deploy
+# use defaults when prompted
+```
