@@ -55,8 +55,8 @@
         "Runtime": "nodejs",
         "Timeout": "300",
         "Code": {
-          "S3Bucket": "lambda-packager",
-          "S3Key": "output.zip"
+          "S3Bucket": "lambda-packager2",
+          "S3Key": "lambda-builder.zip"
         }
       }
     }
