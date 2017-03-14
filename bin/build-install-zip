@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+"use strict";
+
 var AWS   = require('aws-sdk');
 var RSVP  = require('rsvp');
 var temp  = require('temp').track();
@@ -15,6 +17,9 @@ var zipPath;
 mkdir('lambda-packager')
   .then(function(tmpPath) {
     zipPath = path.join(tmpPath, 'lambda-packager.zip');
+  })
+  .then(function() {
+    return exec("npm install", { cwd: 'blueprints/builder' });
   })
   .then(function() {
     return exec("zip -qr " + zipPath + " *", { cwd: 'blueprints/builder' });
