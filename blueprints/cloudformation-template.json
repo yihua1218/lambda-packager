@@ -52,7 +52,7 @@
       "Properties": {
         "Handler": "handler.handler",
         "Role": { "Fn::GetAtt" : ["ExecutionRole", "Arn"] },
-        "Runtime": "nodejs",
+        "Runtime": "nodejs4.3",
         "Timeout": "300",
         "Code": {
           "S3Bucket": "lambda-packager2",
