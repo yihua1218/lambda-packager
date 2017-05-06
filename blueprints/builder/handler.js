@@ -70,7 +70,7 @@ module.exports.handler = function(event, context) {
   }
 
   function installPackages() {
-    var command = "node /var/task/node_modules/npm/bin/npm-cli.js install";
+    var command = "node /var/task/node_modules/npm/bin/npm-cli.js install --no-cache";
     return exec(command, {
       cwd: tmpDir
     });
